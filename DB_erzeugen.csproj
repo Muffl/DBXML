@@ -1,0 +1,95 @@
+﻿<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProjectGuid>{CF2C3F6C-25A1-4757-B232-CAF5C86CC45F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <NoStandardLibraries>false</NoStandardLibraries>
+    <AssemblyName>WindowsApplication</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup>
+    <RootNamespace>DBXML2</RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="DBXML\DBXML.sln" />
+    <Content Include="DBXML\DBXML\bin\Debug\DBXML.exe" />
+    <Content Include="DBXML\DBXML\bin\Debug\DBXML.pdb" />
+    <Content Include="DBXML\DBXML\bin\Debug\userdata.xml" />
+    <Content Include="DBXML\DBXML\obj\Debug\DBXML.csproj.FileListAbsolute.txt" />
+    <Content Include="DBXML\DBXML\obj\Debug\DBXML.exe" />
+    <Content Include="DBXML\DBXML\obj\Debug\DBXML.pdb" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="DBXML\DBXML\App.config" />
+    <None Include="DBXML\DBXML\bin\Debug\DBXML.exe.config" />
+    <None Include="DBXML\DBXML\DBXML.csproj" />
+    <None Include="DBXML\DBXML\obj\Debug\DBXML.csproj.CoreCompileInputs.cache" />
+    <None Include="DBXML\DBXML\obj\Debug\DBXML.csproj.GenerateResource.cache" />
+    <None Include="DBXML\DBXML\obj\Debug\DBXML.csprojAssemblyReference.cache" />
+    <None Include="DBXML\DBXML\obj\Debug\DesignTimeResolveAssemblyReferences.cache" />
+    <None Include="DBXML\DBXML\obj\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
+    <None Include="DBXML\DBXML\Properties\Settings.settings" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBXML\DBXML\Daten.cs" />
+    <Compile Include="DBXML\DBXML\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DBXML\DBXML\Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DBXML\DBXML\Program.cs" />
+    <Compile Include="DBXML\DBXML\Properties\AssemblyInfo.cs" />
+    <Compile Include="DBXML\DBXML\Properties\Resources.Designer.cs" />
+    <Compile Include="DBXML\DBXML\Properties\Settings.Designer.cs" />
+    <Compile Include="DBXML\DBXML\SaveData.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="DBXML\DBXML\Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DBXML\DBXML\obj\Debug\DBXML.Form1.resources" />
+    <EmbeddedResource Include="DBXML\DBXML\obj\Debug\DBXML.Properties.Resources.resources" />
+    <EmbeddedResource Include="DBXML\DBXML\Properties\Resources.resx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DBXML\DBXML\bin\Release\" />
+    <Folder Include="DBXML\DBXML\obj\Debug\TempPE\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSHARP.Targets" />
+  <ProjectExtensions>
+    <VisualStudio AllowExistingFolder="true" />
+  </ProjectExtensions>
+</Project>
